@@ -26,5 +26,3 @@ pydub
 openai
 reportlab
 moviepy
-
-Cha

@@ -19,6 +19,8 @@ Pre-requisites:
 
 install whisper: pip install git+https://github.com/openai/whisper.git
 
+Check out the different available pre-trained models and their performance on whisper's github: https://github.com/openai/whisper
+
 Install  other dependencies:
 pydub
 openai

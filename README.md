@@ -8,7 +8,7 @@ Generate a title for the transcription using OpenAI's GPT-3.5-turbo model
 Create a PDF file with the transcription text formatted on an A4 size page
 Customize the style of the PDF output, including text alignment and font size
 
-Usage: python scribe.py <input_file>
+Usage: python scribev4.py <input_file>
 
 Replace <input_file> with the path to your MP3, M4A, or MP4 file.
 

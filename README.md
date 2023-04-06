@@ -7,20 +7,12 @@ Transcribe audio files using the Whisper ASR model
 Generate a title for the transcription using OpenAI's GPT-3.5-turbo model
 Create a PDF file with the transcription text formatted on an A4 size page
 Customize the style of the PDF output, including text alignment and font size
-Installation
-Clone the repository or download the source files.
-Install the required dependencies:
-Copy code
-pip install -r requirements.txt
-Usage
-php
-Copy code
-python scribe.py <input_file>
+Usage: python scribe.py <input_file>
 Replace <input_file> with the path to your MP3, M4A, or MP4 file.
 
 The script will transcribe the audio file, generate a title, and create a PDF file in the same directory as the input file with the same name but a .pdf extension.
 
-Dependencies
+Dependencies:
 pydub
 openai
 whisper

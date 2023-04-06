@@ -14,11 +14,14 @@ Replace <input_file> with the path to your MP3, M4A, or MP4 file.
 
 The script will transcribe the audio file, generate a title, and create a PDF file in the same directory as the input file with the same name but a .pdf extension.
 
+Pre-requisites:
+
 install whisper: pip install git+https://github.com/openai/whisper.git
 
-Dependencies:
+Install  other dependencies:
 pydub
 openai
-whisper
 reportlab
 moviepy
+
+Cha

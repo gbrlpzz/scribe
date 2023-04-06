@@ -35,7 +35,7 @@ def convert_audio_to_wav(input_file):
         return None
     
 def generate_title(text):
-    openai.api_key = "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"  # Replace with your actual API key
+    openai.api_key = "openai-api-key"  # Replace with your actual API key
 
     prompt = f"Based on the following transcription, generate a concise and relevant title that captures the essence of the content:\n\n{text}\n\nTitle:"
     response = openai.ChatCompletion.create(

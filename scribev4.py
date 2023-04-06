@@ -9,6 +9,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.enums import TA_JUSTIFY
 from moviepy.editor import *
+from transformers import GPT2Tokenizer
+
 
 def convert_audio_to_wav(input_file):
     try:
@@ -35,9 +37,14 @@ def convert_audio_to_wav(input_file):
         return None
     
 def generate_title(text):
-    openai.api_key = "openai-api-key"  # Replace with your actual API key
+    openai.api_key = "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"  # Replace with your actual API key
+    
+    # Truncate the text to the first 1024 tokens
+    tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+    token_ids = tokenizer.encode(text)[:1024]
+    truncated_text = tokenizer.decode(token_ids)
 
-    prompt = f"Based on the following transcription, generate a concise and relevant title that captures the essence of the content:\n\n{text}\n\nTitle:"
+    prompt = f"Based on the following transcription, generate a concise and relevant title that captures the essence of the content. Create the title in the same language as the transcription:\n\n{truncated_text}\n\nTitle:"
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "system", "content": "You are a helpful assistant that generates a title for a transcription."}, {"role": "user", "content": prompt}],

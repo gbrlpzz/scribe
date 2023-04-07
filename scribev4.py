@@ -37,7 +37,7 @@ def convert_audio_to_wav(input_file):
         return None
     
 def generate_title(text):
-    openai.api_key = "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"  # Replace with your actual API key
+    openai.api_key = "insert-api-key"  # Replace with your actual API key
     
     # Truncate the text to the first 1024 tokens
     tokenizer = GPT2Tokenizer.from_pretrained("gpt2")

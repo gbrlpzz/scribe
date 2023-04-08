@@ -31,6 +31,8 @@ moviepy
 
 ## API Version (diet-scribe.py)
 
+Diet scribe uses the openai api and outputs a txt.
+
 1. Set your api key
 
 2. Install all required dependencies: pydub, moviepy, openai
